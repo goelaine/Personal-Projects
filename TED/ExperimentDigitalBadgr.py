@@ -19,12 +19,8 @@ fam = input("Your first name?\n")
 name = "TED Week" + week + " badge.csv"
 print(f"Name: {name}")
 
-
-print(og_df)
-print(og_df.columns.tolist())
-
+# strip extraneous spaces out of column headers
 og_df.columns = og_df.columns.str.rstrip()
-
 
 # Filter rows where the 'Weekly Completion' column has 'Yes' and the student belongs to your family
 filter_df = og_df[(og_df['Weekly Completion'] == 'Yes') & ((og_df['Family']== (fam + ' 1')) | (og_df['Family']== (fam + ' 2')))]
