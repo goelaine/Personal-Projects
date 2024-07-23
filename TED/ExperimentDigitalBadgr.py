@@ -6,7 +6,6 @@ filepath = input("path to csv file: \n")
 # Read into dataframes 
 og_df = pd.read_csv(filepath, header=2)
 
-print(og_df)
 # Input which week this is for
 week = input("Which week is this tracker for? (eg. 1, 2, etc.)\n")
 
