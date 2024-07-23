@@ -24,7 +24,8 @@ print(f"Name: {name}")
 og_df.columns = og_df.columns.str.rstrip()
 
 # Filter rows where the specified week is 'completed' and the student belongs to your family
-filter_df = og_df[(og_df.iloc[:,10+int(week)] == 'Complete') & ((og_df['Family']== (fam + ' 1')) | (og_df['Family']== (fam + ' 2')))]
+filter_df = og_df[(og_df['Weekly Completion'] == 'Yes') & ((og_df['Family']== (fam + ' 1')) | (og_df['Family']== (fam + ' 2')))]
+# filter_df = og_df[(og_df.iloc[:,10+int(week)] == 'Complete') & ((og_df['Family']== (fam + ' 1')) | (og_df['Family']== (fam + ' 2')))]
 
 # Only keep columns with necessary information
 filter_df = filter_df[['Full Name', 'Email']]
