@@ -6,7 +6,7 @@ filepath = input("path to csv file: \n")
 # Read into dataframes 
 og_df = pd.read_csv(filepath, header=2)
 
-# Input today's date
+# Input today's date 
 date = input("What is today's date? in MM-DD-YY format\n")
 
 # Input your name
