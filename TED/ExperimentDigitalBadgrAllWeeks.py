@@ -15,7 +15,7 @@ for week in range(1,7):
     print(f"Name: {name}")
 
     # Input corresponding date 
-    prompt = "What is the issue date for week" + str(week) + " ? in MM-DD-YY format\n"
+    prompt = "What is the issue date for week " + str(week) + "? in MM-DD-YY format\n"
     date = input(prompt)
 
     # strip extraneous spaces out of column headers
