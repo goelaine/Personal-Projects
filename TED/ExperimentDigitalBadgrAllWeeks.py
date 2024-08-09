@@ -6,9 +6,6 @@ filepath = input("path to csv file: \n")
 # Read into dataframes 
 og_df = pd.read_csv(filepath, header=2)
 
-# Input today's date 
-date = input("What is today's date? in MM-DD-YY format\n")
-
 # Input your name
 fam = input("Your first name?\n")
 
@@ -16,6 +13,9 @@ for week in range(1,7):
     # Make new filename
     name = "TED Week" + week + " badge.csv"
     print(f"Name: {name}")
+
+    # Input corresponding date 
+    date = input("What is the issue date for week" + week " ? in MM-DD-YY format\n")
 
     # strip extraneous spaces out of column headers
     og_df.columns = og_df.columns.str.rstrip()
